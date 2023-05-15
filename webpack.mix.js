@@ -9,7 +9,7 @@ mix
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
 
-max.webpackConfig({
+mix.webpackConfig({
     resolve: {
         alias: {
             '@': path.resolve('resources/js'),

@@ -20,4 +20,6 @@ yarn-error.log
 secret
 composer.lock
 package-lock.json
+public/js
+public/css
 ```
