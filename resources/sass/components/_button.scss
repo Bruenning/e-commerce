@@ -1,0 +1,13 @@
+.btn {
+    box-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &.v-btn{
+        &:hover {
+            span.v-btn__content {
+                z-index: 2;
+            }
+        }
+    }
+}

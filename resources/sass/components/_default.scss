@@ -1,0 +1,47 @@
+@use 'vuetify' with (
+  $color-pack: false,
+);
+
+#app {
+    height: 100vh;
+}
+
+html {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #eee;
+    }
+}
+
+.v-application__wrap{
+
+    .v-footer{
+        position: fixed;
+        bottom: 0;
+        flex: 1 1 auto;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    height: 79vh;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.table {
+    p {
+        margin-bottom: 0 !important;
+    }
+}
