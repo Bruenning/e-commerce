@@ -1,2 +1,2 @@
-DirectoryIndex public/index.php
-AddType application/json .map
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
