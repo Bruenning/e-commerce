@@ -1,9 +1,17 @@
 <template>
     <v-form >
-        <div class="container">
-
-            <slot></slot>
-        </div>
+        <slot></slot>
     </v-form>
 </template>
+
+<script>
+export default {
+    props: {
+        classContainer: {
+            type: String,
+            default: ''
+        }
+    }
+}
+</script>
 

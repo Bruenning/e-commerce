@@ -5,11 +5,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="public/favicon.ico">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/app.css">
-    <script src="https://kit.fontawesome.com/e3b76a0f1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body id='app'>
 
-    <script src="public/js/app.js"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
