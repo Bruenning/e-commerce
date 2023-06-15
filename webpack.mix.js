@@ -11,6 +11,8 @@ mix
     .js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
+    .copy('resources/images', 'public/images')
+    .copy('resources/fonts', 'public/fonts')
     .babelConfig({
         presets: ['@babel/preset-env'],
     })

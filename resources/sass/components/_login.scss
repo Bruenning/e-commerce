@@ -1,0 +1,27 @@
+.login {
+    height: 100vh !important;
+
+    > .v-application__wrap {
+        height: 100%;
+
+        .colImg{
+            overflow: hidden;
+            padding: 0 !important;
+            display: flex;
+            justify-content: center;
+    
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .colForm {
+        height: 100%;
+    }
+
+
+    
+}

@@ -23,8 +23,14 @@
         mounted() {
             this.getMenu();
         },
+        watch: {
+            $route() {
+                this.getMenu();
+            }
+        },
         methods: {
             getMenu() {
+                this.menu = []
                 this.$router.options.routes.forEach((route) => {
                     if (route.meta && route.meta.type.indexOf('site') >= 0 && new URL(location.href).pathname.split('/').indexOf('a') < 0) {
                         this.menu.push(route);
@@ -42,7 +48,7 @@
             },
 
             reload() {
-                location.reload()
+                windows.location.reload();
             },
             
             isUrlAdmin() {

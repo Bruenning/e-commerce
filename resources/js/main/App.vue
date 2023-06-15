@@ -2,10 +2,12 @@
     <v-app :class="routeName()">
         <Vheader />
 
-        <Vcontainer class="h-100">
+        <Vcontainer v-if="$route.name != 'login'" class="h-100">
             <RouterView />
         </Vcontainer>
 
+        <RouterView v-else/>
+        
         <Vfooter />
     </v-app>
 </template>

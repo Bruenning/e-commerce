@@ -1,4 +1,9 @@
 {
-    "/js/app.js": "/js/app.js?id=424a74aef01790881467a9c969837cfb",
-    "/css/app.css": "/css/app.css?id=4b5814ec927a9b92bb2f40e43c80e4bb"
+    "/js/app.js": "/js/app.js?id=7e3f96861711ac98ebdac283a9372a01",
+    "/css/app.css": "/css/app.css?id=45bfd3b6261b97c50bd83479dd6bd409",
+    "/images/Login1.png": "/images/Login1.png?id=0ccacc892e33fa8773a94b9ce0c00501",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.eot": "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?id=88aeb37705aafd429306f227b7fd4657",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf": "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf?id=eedcea8e3cd999086a46f3d15d1294eb",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.woff": "/fonts/vendor/@mdi/materialdesignicons-webfont.woff?id=d1606271b13cb166a830ad65ce2dffbf",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2": "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2?id=e9951cb6e58205d79c14e5c24cb1bedc"
 }

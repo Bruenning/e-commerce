@@ -1,7 +1,7 @@
 # https://docs.npmjs.com/docker-and-private-modules
 FROM node:18
 
-ENV APP_HOME="/app"
+ENV APP_HOME="/ecommerce"
 
 WORKDIR ${APP_HOME}
 
