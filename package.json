@@ -1,5 +1,5 @@
 {
-    "name": "@foo/ecommerce",
+    "name": "ecommerce",
     "version": "0.1.0",
     "description": "Sistema portifolio de e-commerce",
     "main": "index.js",
