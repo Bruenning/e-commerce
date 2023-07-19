@@ -5,12 +5,13 @@
         </div>
         <div class="col-3 colForm d-flex h-100">
             <Vform class="w-100">
-                <Vinput label="Email" v-model="email"></Vinput>
-                <Vinput label="Password" v-model="password" type="password" icon="form-textbox-password"></Vinput>
+                <Vinput label="Email" v-model="login.email"></Vinput>
+                <Vinput label="Password" v-model="login.password" type="password" icon="form-textbox-password"></Vinput>
+                <Vbutton @click="teste()">Home</Vbutton>
             </Vform>
 
             <br/>
-            <Vbutton to="/" @click="push('home')">Home</Vbutton>
+            <Vbutton @click="push('home')">Home</Vbutton>
         </div>
     </div>
 </template>
@@ -36,14 +37,13 @@
             }
         },
         mounted() {
-            imageLogin = Math.floor(Math.random() * 3) + 1;
+            this.imageLogin = Math.floor(Math.random() * 3) + 1;
         },
         methods: {
             login() {
                 localStorage.setItem('token', '123');
                 localStorage.setItem('user_id', '1');
                 this.$router.push({name: 'dashboard'});
-                reload()
             },
 
             reload() {
@@ -52,6 +52,11 @@
 
             push(route) {
                 this.$router.push({name: route})
+            },
+
+            teste() {
+                console.log(this.login.email);
+                console.log(this.login.password);
             }
         }        
     }

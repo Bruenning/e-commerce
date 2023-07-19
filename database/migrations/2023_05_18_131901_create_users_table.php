@@ -18,8 +18,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('login')->unique();
             $table->string('password');
+            $table->string('api_token', 80)->unique()->nullable()->default(null);
             $table->string('avatar')->nullable();
-            $table->integer('zip_code')->nullable();
+            $table->string('zip_code')->nullable();
             $table->integer('city_id')->nullable();
             $table->integer('country_id')->nullable();
             $table->string('address')->nullable();
@@ -27,7 +28,6 @@ return new class extends Migration
 
 
             
-            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });
