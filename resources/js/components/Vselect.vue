@@ -1,10 +1,18 @@
 <template>
-    <v-select :items="items" item-value="id" item-title="name" :label="label" :rules="rules" @input="$emit('input', $event)" persistent-hint ></v-select>
+    <v-select
+        :items="items"
+        item-value="id"
+        item-title="name"
+        :label="label"
+        :rules="rules"
+        @input="$emit('input', $event)"
+        persistent-hint
+    ></v-select>
 </template>
 
 <script>
 export default {
-    emits: ['input'],
+    emits: ["input"],
     props: {
         items: {
             type: Array,
@@ -14,7 +22,7 @@ export default {
         },
         rules: {
             type: Array,
-        }
+        },
     },
 }
 </script>

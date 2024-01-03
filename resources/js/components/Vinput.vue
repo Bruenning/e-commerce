@@ -1,42 +1,47 @@
 <!--component input using vuetify e validate-->
 <template>
-    <v-text-field :type="type" :prepend-icon="`mdi-${icon}`" :color="color" :label="Nome" :rules="rules"></v-text-field>
+    <v-text-field
+        :type="type"
+        :prepend-icon="`mdi-${icon}`"
+        :color="color"
+        :label="Nome"
+        :rules="rules"
+    ></v-text-field>
 </template>
 
 <script>
 export default {
-    emits: ['update:rules'],
+    emits: ["update:rules"],
     props: {
         icon: {
             type: String,
-            default: 'account'
+            default: "account",
         },
         color: {
             type: String,
-            default: 'primary'
+            default: "primary",
         },
         Nome: {
             type: String,
-            default: 'Nome'
+            default: "Nome",
         },
         rules: {
             type: Array,
-            default: () => []
+            default: () => [],
         },
         type: {
             type: String,
-            default: 'text'
+            default: "text",
         },
     },
     watch: {
         rules: {
             handler() {
-                this.$emit('update:rules', this.rules)
+                this.$emit("update:rules", this.rules)
             },
-            deep: true
-        }
+            deep: true,
+        },
     },
-    methods: {
-    }
+    methods: {},
 }
 </script>

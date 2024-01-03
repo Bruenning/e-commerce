@@ -1,41 +1,51 @@
-let mix = require('laravel-mix');
+let mix = require("laravel-mix")
+const path = require("path")
+
+// const EventEmitter = require('events');
+// EventEmitter.defaultMaxListeners = 15;
 
 // Path: webpack.config.js
 
 const path = require('path');
-const { rule } = require('postcss');
+const fs =  require('fs');
 
-mix
-    .js('resources/js/app.js', 'public/js')
+const package = JSON.parse(fs.readFileSync('./package.json'));
+
+mix.js("resources/js/app.js", "public/js")
     .vue()
-    .sass('resources/sass/app.scss', 'public/css')
-
-mix.extend('vue', (mix) => {
-    const vueLoaderConfig = {
-        transformToRequire : {
-            video : ['src', 'poster'],
-            source : 'src',
-            img : 'src',
-            image : 'xlink:href',
-        },
-    }
-
-    mix.webpackConfig({
-        resolve: {
-            extensions: ['.js', '.vue', '.json'],
-            alias: {
-                '@': path.resolve('resources/js'),
-            },
-            modules: {
-                rules: [
-                    {
-                        test: /\.vue$/,
-                        loader: 'vue-loader',
-                        options: vueLoaderConfig,
-                    },
-                ],
-            },
-        },
+    .sass("resources/sass/app.scss", "public/css")
+    .copy("resources/images", "public/images")
+    .copy('node_modules/@mdi/font/fonts/', 'public/fonts/')
+    .babelConfig({
+        presets: ['@babel/preset-env'],
     })
+
+mix.webpackConfig({
+    resolve: {
+        extensions: [".js", ".vue", ".json"],
+        fallback: {
+            os: require.resolve("os-browserify/browser"),
+            path: require.resolve("path-browserify"),
+            fs: false,
+        },
+        alias: {
+            "@": path.resolve(__dirname, "resources/js"),
+        },
+    },
+    //     module: {
+    //         rules: [
+    //             {
+    //                 test: /\.vue$/,
+    //                 loader: 'vue-loader',
+    //             },
+    //         ]
+    // }
 })
 
+mix.disableNotifications()
+
+mix.version()
+
+mix.disableNotifications()
+
+mix.version()

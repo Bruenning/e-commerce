@@ -3,6 +3,8 @@
 /public/build
 /public/hot
 /public/storage
+/public/fonts
+/public/images
 /storage/*.key
 /vendor
 .env
@@ -23,4 +25,5 @@ package-lock.json
 public/js
 public/css
 ecommerce.pem
+ray.php
 ```

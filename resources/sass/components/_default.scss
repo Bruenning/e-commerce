@@ -1,5 +1,5 @@
-@use 'vuetify' with (
-  $color-pack: false,
+@use "vuetify" with (
+    $color-pack: false
 );
 
 #app {
@@ -23,8 +23,6 @@ html {
 .v-application__wrap{
 
     .v-footer{
-        position: fixed;
-        bottom: 0;
         flex: 1 1 auto;
         width: 100%;
         padding-left: 0;
@@ -32,7 +30,7 @@ html {
     }
 }
 
-.dashboard{
+.dashboard {
     display: flex;
     flex-direction: column;
     height: 79vh;

@@ -3,22 +3,22 @@
         {{ message }}
     </v-snackbar>
 </template>
-  
+
 <script>
 export default {
     props: {
         message: {
             type: String,
-            default: 'Erro de validação'
+            default: "Erro de validação",
         },
         color: {
             type: String,
-            default: 'error'
+            default: "error",
         },
         timeout: {
             type: Number,
-            default: 3000
-        }
+            default: 3000,
+        },
     },
     methods: {
         open(message, color, timeout) {
@@ -27,6 +27,6 @@ export default {
             this.timeout = timeout
             this.$refs.snackbar.open()
         },
-    }
+    },
 }
 </script>

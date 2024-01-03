@@ -7,8 +7,12 @@
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" text @click="cancel">Cancelar</v-btn>
-                <v-btn color="blue darken-1" text @click="confirm">Aceptar</v-btn>
+                <v-btn color="blue darken-1" text @click="cancel"
+                    >Cancelar</v-btn
+                >
+                <v-btn color="blue darken-1" text @click="confirm"
+                    >Aceptar</v-btn
+                >
             </v-card-actions>
         </v-card>
     </v-dialog>
@@ -16,29 +20,29 @@
 
 <script>
 export default {
-    emits: ['confirm', 'cancel'],
+    emits: ["confirm", "cancel"],
     props: {
         title: {
             type: String,
-            default: 'Confirmación'
+            default: "Confirmación",
         },
         message: {
             type: String,
-            default: '¿Está seguro de realizar esta acción?'
-        }
+            default: "¿Está seguro de realizar esta acción?",
+        },
     },
     data() {
         return {
-            dialog: false
+            dialog: false,
         }
     },
     methods: {
         confirm() {
-            this.$emit('confirm')
+            this.$emit("confirm")
         },
         cancel() {
-            this.$emit('cancel')
-        }
-    }
+            this.$emit("cancel")
+        },
+    },
 }
 </script>
