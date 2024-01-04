@@ -1,6 +1,7 @@
-import "./bootstrap"
-import { createApp } from "vue"
-import { Collection, collect } from "collect.js"
+import './bootstrap';
+import { createApp } from 'vue';
+import { Collection, collect } from 'collect.js'
+
 
 import router from "./router.js"
 import store from "./store"
@@ -65,6 +66,7 @@ const app = createApp(App)
 app .use(vuetify)
     .use(router)
     .use(store)
+    .use(store)
 
 //components
 app.component("Vinput", Vinput)
@@ -82,6 +84,21 @@ app.component("FormArray", FormArray)
 app.component("Vtextarea", Vtextarea)
 
 app.component("VueDatePicker", VueDatePicker)
+app.component('Vinput', Vinput)
+app.component('Vbutton', Vbutton)
+app.component('Vselect', Vselect)
+app.component('Vcol', Vcol)
+app.component('Vrow', Vrow)
+app.component('Vcontainer', Vcontainer)
+app.component('Vform', Vform)
+app.component('Vsnackbar', Vsnackbar)
+app.component('Vdialog', Vdialog)
+app.component('Vheader', Vheader)
+app.component('Vfooter', Vfooter)
+app.component('FormArray', FormArray)
+app.component('Vtextarea', Vtextarea)
+
+app.component('VueDatePicker', VueDatePicker)
 
 /**
  * pages
