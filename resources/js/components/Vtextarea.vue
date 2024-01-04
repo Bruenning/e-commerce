@@ -1,5 +1,10 @@
 <template>
-    <v-textarea :label="label" :prepend-icon="`mdi-${icon}`" :color="color" :rules="rules"></v-textarea>
+    <v-textarea
+        :label="label"
+        :prepend-icon="`mdi-${icon}`"
+        :color="color"
+        :rules="rules"
+    ></v-textarea>
 </template>
 
 <script>
@@ -11,15 +16,15 @@ export default {
         },
         icon: {
             type: String,
-            default: ''
+            default: "",
         },
         color: {
             type: String,
-            default: ''
+            default: "",
         },
         rules: {
             type: Array,
-            default: () => []
+            default: () => [],
         },
     },
 }

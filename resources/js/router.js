@@ -38,13 +38,40 @@ const routes = [
         component: () => import('./Pages/admin/Home.vue'),
     },
     {
-        path: '/:pathMatch(.*)*',
-        name: 'not-found',
+        path: "/contact",
+        name: "contact",
         meta: {
-            title: 'Not Found',
+            title: "Contact",
+            type: ["site"],
+        },
+        component: () => import("./Pages/site/Contact.vue"),
+    },
+    {
+        path: "/a/login",
+        name: "login",
+        meta: {
+            title: "Login",
             type: [],
         },
-        component: () => import('./Pages/NotFound.vue'),
+        component: () => import("./Pages/admin/Login.vue"),
+    },
+    {
+        path: "/a",
+        name: "dashboard",
+        meta: {
+            title: "Home",
+            type: [],
+        },
+        component: () => import("./Pages/admin/Home.vue"),
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "not-found",
+        meta: {
+            title: "Not Found",
+            type: [],
+        },
+        component: () => import("./Pages/NotFound.vue"),
     },
 ]
 

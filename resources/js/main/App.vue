@@ -9,6 +9,14 @@
         <RouterView v-else/>
         
         <Vfooter />
+    <v-app :class="routeName()">
+        <Vheader />
+
+        <Vcontainer class="h-100">
+            <RouterView />
+        </Vcontainer>
+
+        <Vfooter />
     </v-app>
 </template>
 
@@ -24,5 +32,4 @@ export default {
             return this.$route.name
         }
     }
-}
 </script>

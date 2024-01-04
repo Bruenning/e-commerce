@@ -3,8 +3,8 @@ import { createApp } from 'vue';
 import { Collection, collect } from 'collect.js'
 
 
-import router from './router.js';
-import store from './store';
+import router from "./router.js"
+import store from "./store"
 
 import App from "./main/App.vue"
 
@@ -20,18 +20,17 @@ import "bootstrap/dist/js/bootstrap.js"
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import 'vuetify/dist/vuetify.min.css';
+import "vuetify/dist/vuetify.min.css"
 import '@mdi/font/css/materialdesignicons.css'
 
 const vuetify = createVuetify({
     components,
     directives,
     icons: {
-        defaultSet: 'mdi',
-        iconfont: 'mdi',
+        defaultSet: "mdi",
+        iconfont: "mdi",
     },
-});
-
+})
 
 /**
  * início imports
@@ -49,7 +48,7 @@ import Vdialog from "./components/Vdialog.vue"
 import Vheader from "./components/Vheader.vue"
 import Vfooter from "./components/Vfooter.vue"
 import FormArray from "./components/FormArray.vue"
-import Vtextarea from './components/Vtextarea.vue'
+import Vtextarea from "./components/Vtextarea.vue"
 
 //pages
 import Home from "./Pages/site/Home.vue"
@@ -62,17 +61,29 @@ import NotFound from "./Pages/NotFound.vue"
  * fim imports
  */
 
-
 const app = createApp(App)
 
-
-app
-    .use(vuetify)
+app .use(vuetify)
     .use(router)
     .use(store)
     .use(store)
 
 //components
+app.component("Vinput", Vinput)
+app.component("Vbutton", Vbutton)
+app.component("Vselect", Vselect)
+app.component("Vcol", Vcol)
+app.component("Vrow", Vrow)
+app.component("Vcontainer", Vcontainer)
+app.component("Vform", Vform)
+app.component("Vsnackbar", Vsnackbar)
+app.component("Vdialog", Vdialog)
+app.component("Vheader", Vheader)
+app.component("Vfooter", Vfooter)
+app.component("FormArray", FormArray)
+app.component("Vtextarea", Vtextarea)
+
+app.component("VueDatePicker", VueDatePicker)
 app.component('Vinput', Vinput)
 app.component('Vbutton', Vbutton)
 app.component('Vselect', Vselect)
@@ -89,23 +100,19 @@ app.component('Vtextarea', Vtextarea)
 
 app.component('VueDatePicker', VueDatePicker)
 
-
 /**
  * pages
-*/
+ */
 //page default
-app.component('App', App)
-app.component('NotFound', NotFound)
+app.component("App", App)
+app.component("NotFound", NotFound)
 
 //site
-app.component('Home', Home)
-app.component('contact', Contact)
-
+app.component("Home", Home)
+app.component("contact", Contact)
 
 //admin
-app.component('Login', Login)
-
-
+app.component("Login", Login)
 
 app.config.productionTip = false
 
@@ -115,4 +122,4 @@ app.config.globalProperties.$collect = collect;
 app.config.globalProperties.$collection = Collection;
 app.config.globalProperties.$c = collect;
 
-app.mount('#app')
+app.mount("#app")

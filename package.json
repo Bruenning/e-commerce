@@ -52,12 +52,13 @@
     "dependencies": {
         "@mdi/font": "^7.2.96",
         "@vue/cli": "^5.0.8",
-        "@vuepic/vue-datepicker": "^5.0.1",
+        "@vuepic/vue-datepicker": "^7.4.0",
         "collect.js": "^4.36.1",
         "dotenv": "^16.0.3",
         "jquery": "^3.7.0",
         "os-browserify": "^0.3.0",
         "path-browserify": "^1.0.1",
+        "vuetify": "^3.4.8",
         "vuex-persistedstate": "^4.1.0"
     }
 }

@@ -8,27 +8,27 @@ export default {
         return {
             items: [
                 {
-                    label: 'Name',
-                    type: 'text',
-                    icon: 'account',
+                    label: "Name",
+                    type: "text",
+                    icon: "account",
                 },
                 {
-                    label: 'Email',
-                    type: 'email',
-                    icon: 'email',
+                    label: "Email",
+                    type: "email",
+                    icon: "email",
                 },
                 {
-                    label: 'Phone',
-                    type: 'text',
-                    icon: 'phone',
+                    label: "Phone",
+                    type: "text",
+                    icon: "phone",
                 },
                 {
-                    label: 'Message',
-                    type: 'textarea',
-                    icon: 'message',
+                    label: "Message",
+                    type: "textarea",
+                    icon: "message",
                 },
-            ]
+            ],
         }
-    }
+    },
 }
 </script>
