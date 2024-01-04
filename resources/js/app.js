@@ -116,10 +116,10 @@ app.component("Login", Login)
 
 app.config.productionTip = false
 
-app.config.globalProperties.$version = require("../../package.json").version
-app.config.globalProperties.$api = require("./api.js").default
-app.config.globalProperties.$collect = collect
-app.config.globalProperties.$collection = Collection
-app.config.globalProperties.$c = collect
+app.config.globalProperties.$version = require('../../package.json').version;
+app.config.globalProperties.$api = require('./api.js').default
+app.config.globalProperties.$collect = collect;
+app.config.globalProperties.$collection = Collection;
+app.config.globalProperties.$c = collect;
 
 app.mount("#app")

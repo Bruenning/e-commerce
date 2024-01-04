@@ -20,21 +20,21 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = Users::create($request->all());
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Users $users)
+    public function show(Users $user)
     {
-        //
+        return $user;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Users $users)
+    public function update(Request $request, Users $user)
     {
         //
     }
@@ -42,7 +42,7 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Users $users)
+    public function destroy(Users $user)
     {
         //
     }

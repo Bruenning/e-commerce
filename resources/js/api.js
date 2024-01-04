@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: "http://ecommerce.gui/api",
     timeout: 1000,
     headers: {
         'X-Custom-Header': 'foobar'
@@ -46,7 +46,7 @@ api.defaults.headers.common['Accept'] = 'application/json';
  * @returns {Promise}
  */
 
-api.get = async function (url, config = {}) {
+async function get (url, config = {}) {
     return await new Promise((resolve, reject) => {
         api.get(url, config)
             .then(response => {
@@ -67,7 +67,7 @@ api.get = async function (url, config = {}) {
  * @returns {Promise}
  */
 
-api.post = async function (url, data = {}, config = {}) {
+async function post (url, data = {}, config = {}) {
     return await new Promise((resolve, reject) => {
         api.post(url, data, config)
             .then(response => {
@@ -88,7 +88,7 @@ api.post = async function (url, data = {}, config = {}) {
  * @returns {Promise}
  */
 
-api.put = async function (url, data = {}, config = {}) {
+async function put (url, data = {}, config = {}) {
     return await new Promise((resolve, reject) => {
         api.put(url, data, config)
             .then(response => {
@@ -108,7 +108,7 @@ api.put = async function (url, data = {}, config = {}) {
  * @returns {Promise}
  */
 
-api.delete = async function (url, config = {}) {
+async function deleted (url, config = {}) {
     return await new Promise((resolve, reject) => {
         api.delete(url, config)
             .then(response => {
@@ -120,4 +120,4 @@ api.delete = async function (url, config = {}) {
     });
 }
 
-export default api;
+export default { get, post, put, deleted};

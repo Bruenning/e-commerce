@@ -11,12 +11,16 @@ class Users extends Model
 
     protected $primaryKey = 'id';
     protected $table = 'users';
+    public $timestamps = true;
+
+
 
     protected $fillable = [
         'id',
         'name',
         'email',
         'password',
+        'login',
         'zip_code',
         'city_id',
         'country_id',

@@ -1,4 +1,4 @@
-import router from "@/router"
+import router from '@/router'
 
 export default {
     namespaced: true,
@@ -6,10 +6,10 @@ export default {
         authenticated: false,
         user: {
             login: {
-                email: "",
-                password: "",
-                token: "",
+                email: '',
+                password: '',
+                token: '',
             },
-        },
-    },
+        }
+    }
 }

@@ -20,8 +20,8 @@ export default {
     props: {
         classContainer: {
             type: String,
-            default: "",
-        },
-    },
+            default: ''
+        }
+    }
 }
 </script>

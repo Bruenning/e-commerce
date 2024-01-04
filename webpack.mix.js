@@ -1,3 +1,4 @@
+
 let mix = require("laravel-mix")
 const path = require("path")
 
@@ -6,10 +7,7 @@ const path = require("path")
 
 // Path: webpack.config.js
 
-const path = require('path');
-const fs =  require('fs');
-
-const package = JSON.parse(fs.readFileSync('./package.json'));
+// Path: webpack.config.js
 
 mix.js("resources/js/app.js", "public/js")
     .vue()

@@ -13,18 +13,38 @@
                     icon="form-textbox-password"
                 />
                 <Vbutton @click="push('home')">Home</Vbutton>
-            </Vform>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            login: {
-                email: "",
-                password: "",
+    export default {
+        data() {
+            return {
+                login: {
+                    email: '',
+                    password: ''
+                },
+                rules: {
+                    email: [
+                        v => !!v || 'Email is required',
+                        v => /.+@.+\..+/.test(v) || 'Email must be valid'
+                    ],
+                    password: [
+                        v => !!v || 'Password is required',
+                    ]
+                },
+                imageLogin: 1
+            }
+        },
+        mounted() {
+            this.imageLogin = Math.floor(Math.random() * 3) + 1;
+        },
+        methods: {
+            login() {
+                localStorage.setItem('token', '123');
+                localStorage.setItem('user_id', '1');
+                this.$router.push({name: 'dashboard'});
             },
             rules: {
                 email: [
@@ -46,18 +66,18 @@ export default {
             this.$router.push({ name: "dashboard" })
         },
 
-        reload() {
-            window.location.reload()
-        },
+            reload() {
+                window.location.reload()
+            },
 
-        push(route) {
-            this.$router.push({ name: route })
-        },
+            push(route) {
+                this.$router.push({name: route})
+            },
 
-        teste() {
-            console.log(this.login.email)
-            console.log(this.login.password)
-        },
-    },
-}
+            teste() {
+                console.log(this.login.email);
+                console.log(this.login.password);
+            }
+        }        
+    }
 </script>
