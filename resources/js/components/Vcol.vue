@@ -5,12 +5,12 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            cols: {
-                type: Number,
-                default: 12
-            }
-        }
-    }
+export default {
+    props: {
+        cols: {
+            type: Number,
+            default: 12,
+        },
+    },
+}
 </script>

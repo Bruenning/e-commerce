@@ -1,5 +1,5 @@
-@use 'vuetify' with (
-  $color-pack: false,
+@use "vuetify" with (
+    $color-pack: false
 );
 
 #app {
@@ -30,7 +30,7 @@ html {
     }
 }
 
-.dashboard{
+.dashboard {
     display: flex;
     flex-direction: column;
     height: 79vh;

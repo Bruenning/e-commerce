@@ -6,16 +6,17 @@ import { Collection, collect } from 'collect.js'
 import router from './router.js';
 import store from './store';
 
-import App from './main/App.vue';
+import App from "./main/App.vue"
 
-import VueDatePicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
+import VueDatePicker from "@vuepic/vue-datepicker"
+import "@vuepic/vue-datepicker/dist/main.css"
+
+import "bootstrap/dist/css/bootstrap.css"
+import "jquery/dist/jquery.js"
+import "bootstrap/dist/js/bootstrap.js"
 
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'jquery/dist/jquery.js'
-import 'bootstrap/dist/js/bootstrap.js'
-
+// Vuetify
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
@@ -68,6 +69,7 @@ const app = createApp(App)
 app
     .use(vuetify)
     .use(router)
+    .use(store)
     .use(store)
 
 //components
